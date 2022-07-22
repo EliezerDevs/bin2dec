@@ -4,20 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="exchange.png">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Conversor de Binario a Decimal</title>
 </head>
 <body>
-    <h1>Convertir de Binario a Decimal</h1>
-    <label for="inputBinary">Binario: </label>
-    <input id="inputBinary" type="text"/>
-    <button onclick="convertToDecimal()">Convertir!</button>
-    <h3>Resultado: <b id="result">0</b></h3>
-    <footer>
-        <p>Developed by: Eliezer Lorenzo Garcia</p>
-        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-
+    <div class="container">
+        <h1 class="title is-1 has-text-centered">Conversor de numeros</h1>
+        <div class="media is-flex-direction-column is-align-items-center">
+            <div class="box">
+                <div class="has-addons">
+                    <div class="select mx-auto">
+                        <select name="select" id="selection">
+                            <option value="decimal">Binario a decimal</option>
+                            <option value="binary">Decimal a binario</option>
+                        </select>
+                    </div>
+                    <label class="label" for="inputValue">Valor: </label>
+    
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            
+                          <input class="input" id="inputValue" type="text" placeholder="Value">
+                        </div>
+                        <div class="control">
+                          <a class="button is-info" onclick="convertValue()">
+                            Convertir!
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="control mt-2">
+                    <h4 class="title is-4 has-text-centered">Resultado: <b id="result">0</b></h4>
+    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Developed by: Eliezer Lorenzo Garcia</p>
+        </div>
     </footer>
+    
     <script src="script.js"></script>
 
 </body>

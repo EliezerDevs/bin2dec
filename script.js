@@ -1,7 +1,8 @@
-function convertToDecimal() {
-    let binario = document.getElementById('inputBinary').value;
+function convertValue() {
+    let value = document.getElementById('inputValue').value;
+    let select = document.getElementById('selection').value;
     let x = '';
-    x = binario;
+    x = value;
     let length = x.length;
     let aux = length;
     let result = 0;
@@ -17,20 +18,35 @@ function convertToDecimal() {
       alert('El binario que ingreso no esta permitido: (la cantidad de valores deben ser menor o igual a 8)');
     }
     
-    
-    while(menorQue8){
-      for(let i = 0; i < aux; i++) {
-        result = result + (+x[i] * Math.pow(2,length-1));
-        if(+x[i] !== 1 && +x[i] !== 0){
-          alert('El binario que ingreso no esta permitido: (Ingrese un binario valido)');
-          result = 0;
-          break;
+    if (select === 'decimal') {
+      while(menorQue8){
+        for(let i = 0; i < aux; i++) {
+          result = result + (+x[i] * Math.pow(2,length-1));
+          if(+x[i] !== 1 && +x[i] !== 0){
+            alert('El binario que ingreso no esta permitido: (Ingrese un binario valido)');
+            result = 0;
+            break;
+          }
+          length--;
         }
-        length--;
+        menorQue8 = false;
       }
-      menorQue8 = false;
     }
+    else {
+      let num = +value;
+      let binary = (num % 2).toString();
+      for (; num > 1; ) {
+          num = parseInt(num / 2);
+          binary =  (num % 2) + (binary);
+      }
+      result = binary;
+    }
+    
     
     document.getElementById('result').innerText = result;
     
   }
+
+function convertToBinary() {
+
+}
