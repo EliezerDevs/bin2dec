@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="exchange.png">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Conversor de Binario a Decimal</title>
+    <title>Unit Converter</title>
+    <script refer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title is-1 has-text-centered">Conversor de numeros</h1>
+    <div class="container mb`">
+        <h1 class="title is-1 has-text-centered">Unit Converter</h1>
         <div class="media is-flex-direction-column is-align-items-center">
             <div class="box">
                 <div class="has-addons">
                     <div class="select mx-auto">
                         <select name="select" id="selection">
-                            <option value="decimal">Binario a decimal</option>
-                            <option value="binary">Decimal a binario</option>
+                            <option value="decimal">Binary to decimal</option>
+                            <option value="binary">Decimal to binary</option>
                         </select>
                     </div>
                     <label class="label" for="inputValue">Valor: </label>
@@ -28,27 +29,39 @@
                           <input class="input" id="inputValue" type="text" placeholder="Value">
                         </div>
                         <div class="control">
-                          <a class="button is-info" onclick="convertValue()">
-                            Convertir!
+                          <a class="button is-info js-modal-trigger" onclick="convertValue()">
+                            Convert!
                           </a>
                         </div>
                       </div>
                 </div>
                 <div class="control mt-2">
-                    <h4 class="title is-4 has-text-centered">Resultado: <b id="result">0</b></h4>
+                    <h4 class="title is-4 has-text-centered">Result: <b id="result">0</b></h4>
     
                 </div>
             </div>
         </div>
+        <div id="modal-js-example" class="modal">
+            <div class="modal-background"></div>
+          
+            <div class="modal-content">
+              <div class="box">
+                <p>Modal JS example</p>
+                <!-- Your content -->
+              </div>
+            </div>
+          
+            <button class="modal-close is-large" aria-label="close"></button>
+          </div>
         
     </div>
-    <footer class="footer">
+    <footer class="footer mt-auto">
         <div class="content has-text-centered">
             <p>Developed by: Eliezer Lorenzo Garcia</p>
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    
 
 </body>
 </html>
