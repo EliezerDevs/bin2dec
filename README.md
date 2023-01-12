@@ -30,4 +30,4 @@ constraints:
 - [X] User can enter a variable number of binary digits
 
 Pagina del ejercicio:
-https://elorenzog.github.io/bin2dec/
+https://elorenzog.github.io/unit-converter/
